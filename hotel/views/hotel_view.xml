@@ -72,7 +72,7 @@
         </record>
 
         <menuitem name="Floor"
-                  id="menu_open_hotel_floor_form_tree" 
+                  id="menu_open_hotel_floor_form_tree"
                   action="open_hotel_floor_form_tree"
                   sequence="21"
                   parent="hotel_configuration_menu"/>
@@ -119,12 +119,12 @@
         </record>
         <menuitem  id="menu_hotel_room" name="Room" parent="hotel.hotel_configuration_menu" sequence="2"/>
         <menuitem name="Room Types"
-                  id="menu_open_hotel_room_type_form_tree" 
+                  id="menu_open_hotel_room_type_form_tree"
                   action="open_hotel_room_type_form_tree"
                   sequence="6"
                   parent="hotel.menu_hotel_room"/>
 
-        <!--==================================================================== 
+        <!--====================================================================
                                 Amenities Type
         ====================================================================-->
         <!-- Form view of hotel room amenities type -->
@@ -332,15 +332,15 @@
                         <page string="Procurement">
                           <group colspan="4" col="4">
                             <field name="active" select="2"/>
-                            <field name="list_price"/> 
+                            <field name="list_price"/>
                             <field name="rental" select="2"/>
-                            <field name="standard_price"/> 
-                            <field name="cost_method"/>    
+                            <field name="standard_price"/>
+                            <field name="cost_method"/>
                             <field name="uos_id"/>
-                            <field name="uos_coeff" /> 
-                             <newline/> 
+                            <field name="uos_coeff" />
+                             <newline/>
                            </group>
-                          <newline/> 
+                          <newline/>
                           <group>
                             <separator string="Suppliers" />
                             <field name="seller_ids" colspan="4" nolabel="1" widget="one2many_list"/>
@@ -431,7 +431,7 @@
                                         </ul>
                                 </div>
                                 <div class="oe_kanban_details" style='margin-top: -5px;'>
-                                   <div class="oe_kanban_content"> 
+                                   <div class="oe_kanban_content">
                                        <div class="oe_kanban_project_list">
                                            <H3>
                                            <a type="open">
@@ -468,10 +468,10 @@
             <field name="view_mode">kanban,tree,form</field>
         </record>
 
-        <menuitem name="Rooms" 
-            id="menu_open_hotel_room_form" 
-            action="action_hotel_room_form" 
-            sequence="5" 
+        <menuitem name="Rooms"
+            id="menu_open_hotel_room_form"
+            action="action_hotel_room_form"
+            sequence="5"
             parent="hotel.menu_hotel_room"/>
 
         <!--========================================================
@@ -500,7 +500,7 @@
                  </header>
                   <sheet>
                     <div class="oe_right oe_button_box">
-                         <button name="go_to_currency_exchange" string="Money Exchange" icon="fa-refresh" class="oe_stat_button" type="object"/> 
+                         <button name="go_to_currency_exchange" string="Money Exchange" icon="fa-refresh" class="oe_stat_button" type="object"/>
                     </div>
                     <label string="Folio Number"/>
                     <h1>
@@ -523,7 +523,7 @@
                          </group>
                             <newline/>
                             <group colspan="4" col="4">
-                                <field name="checkin_date"/> 
+                                <field name="checkin_date"/>
                                 <field name="checkout_date"/>
                                 <field name="duration"/>
                             </group>
@@ -585,7 +585,7 @@
                                 <form string="Service Line"  >
                                     <notebook>
                                         <page string="Service Line">
-                                            <group> 
+                                            <group>
                                                 <field name="ser_checkin_date"/>
                                                 <field name="ser_checkout_date" />
                                             </group>
@@ -648,7 +648,7 @@
                             <field name="user_id"/>
                             <field name="order_policy" invisible="1"/>
                             <field name="hotel_policy" attrs="{'readonly':[('state','not in',('draft'))]}"/>
-                            <field name="client_order_ref" />   
+                            <field name="client_order_ref" />
                           </group>
                         </page>
                         <page string="History">
@@ -657,7 +657,7 @@
                         </page>
                         <page string="Foreign Exchange">
                              <separator string="Foreign Exchange" colspan="4"/>
-                             <field name="currrency_ids" colspan="4" nolabel="1"> 
+                             <field name="currrency_ids" colspan="4" nolabel="1">
                                 <tree>
                                     <field name="name"/>
                                     <field name="today_date"/>
@@ -747,10 +747,10 @@
                   id="menu_open_hotel_folio1_form_tree_all"
                   action="open_hotel_folio1_form_tree_all"
                   sequence="5"
-                  parent ="menu_all_folio"/> 
+                  parent ="menu_all_folio"/>
 
        <!--========================================================
-                            Hotel Service Type 
+                            Hotel Service Type
         ========================================================-->
 
         <!-- Form view of hotel service type  -->
@@ -790,14 +790,14 @@
             <field name="view_mode">tree,form</field>
         </record>
         <menuitem id="menu_hotel_service" name="Services" parent="hotel.hotel_configuration_menu" sequence="2"/>
-        <menuitem name="Service Types" 
-                  id="menu_open_hotel_service_type_form_tree" 
+        <menuitem name="Service Types"
+                  id="menu_open_hotel_service_type_form_tree"
                   action="open_hotel_service_type_form_tree"
                   sequence="9"
                   parent="hotel.menu_hotel_service"/>
 
        <!--========================================================
-                             Hotel Service 
+                             Hotel Service
         ========================================================-->
 
         <!-- Form view of hotel service -->
@@ -904,7 +904,7 @@
         </record>
 
         <menuitem name="Services"
-                  id="menu_open_hotel_services_form" 
+                  id="menu_open_hotel_services_form"
                   action="action_hotel_services_form"
                   sequence="8"
                   parent="hotel.menu_hotel_service"/>
@@ -918,8 +918,8 @@
             <field name="view_type">tree</field>
             <field name="view_id" ref="product.product_category_tree_view"/>
         </record>
-        <menuitem name="Room by Type" 
-                  id="menu_hotel_room_category_action" 
+        <menuitem name="Room by Type"
+                  id="menu_hotel_room_category_action"
                   action="hotel_room_category_action"
                   sequence="7"
                   parent="hotel.menu_hotel_room"/>
@@ -932,8 +932,8 @@
             <field name="view_type">tree</field>
             <field name="view_id" ref="product.product_category_tree_view"/>
         </record>
-        <menuitem name="Amenities by Type" 
-                  id="menu_hotel_ty_category_action" 
+        <menuitem name="Amenities by Type"
+                  id="menu_hotel_ty_category_action"
                   action="hotel_ty_category_action"
                   sequence="4"
                   parent="hotel.menu_amenity"/>
@@ -946,11 +946,11 @@
             <field name="view_type">tree</field>
             <field name="view_id" ref="product.product_category_tree_view"/>
         </record>
-        <menuitem name="Services by Type" 
-                  id="menu_hotel_service_category_action" 
+        <menuitem name="Services by Type"
+                  id="menu_hotel_service_category_action"
                   action="hotel_service_category_action"
                   sequence="10"
-                  parent="hotel.menu_hotel_service"/>	
+                  parent="hotel.menu_hotel_service"/>
 
     <!--====================================================
                                 Currency
@@ -1002,7 +1002,7 @@
                        <h1>
                             <field name="total" widget="monetary" options="{'currency_field': 'out_curr'}"/>
                        </h1>
-                   <group colspan="2" col="4"> 
+                   <group colspan="2" col="4">
                    </group>
                  </sheet>
                 </form>
@@ -1032,7 +1032,7 @@
         </record>
 
         <menuitem name="Currency Exchange"
-                  id="menu_currency_exchange_tree" 
+                  id="menu_currency_exchange_tree"
                   action="open_currency_exchange_tree"
                   sequence="22"
                   parent="hotel_configuration_menu"/>

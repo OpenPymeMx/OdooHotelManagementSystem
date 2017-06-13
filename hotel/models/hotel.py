@@ -480,6 +480,7 @@ class HotelFolio(models.Model):
             folio_id = super(HotelFolio, self).create(vals)
         return folio_id
 
+    """
     @api.onchange('warehouse_id')
     def onchange_warehouse_id(self):
         '''
@@ -492,6 +493,7 @@ class HotelFolio(models.Model):
             order = folio.order_id
             x = order.onchange_warehouse_id(folio.warehouse_id.id)
         return x
+    """
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
@@ -593,7 +595,7 @@ class HotelFolio(models.Model):
         res = False
         for o in self:
             sale_obj = sale_order_obj.browse([o.order_id.id])
-            res = sale_obj.procurement_needed()
+            # res = sale_obj.procurement_needed()
         return res
 
     @api.multi
@@ -1391,3 +1393,20 @@ class AccountInvoice(models.Model):
             for pos_id in pos_ids:
                 pos_id.write({'state': 'done'})
         return res
+
+
+class SaleOrder(models.Model):
+    _inherit = 'sale.order'
+
+    @api.model
+    def _get_default_warehouse(self):
+        company = self.env.user.company_id
+        warehouse = self.env['stock.warehouse'].search(
+            [('company_id', '=', company.id)], limit=1,
+        )
+        return warehouse
+
+    warehouse_id = fields.Many2one(
+        'stock.warehouse', 'Warehouse', required=True,
+        default=lambda self: self._get_default_warehouse(),
+    )
